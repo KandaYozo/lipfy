@@ -96,7 +96,7 @@ def get_box(img,RGB_img):
             else:
                 minor_axis = y+h
                 major_axis = x+w
-            if((w/h < box_ratio_upper_bound)and (w/h > box_ratio_lower_bound) and (minor_axis/major_axis > 0.25) and (minor_axis/major_axis<0.97) and area > 1000):
+            if((w/h < box_ratio_upper_bound)and (w/h > box_ratio_lower_bound) and (minor_axis/major_axis > 0.25) and (minor_axis/major_axis<0.97) and area > 1200):
                 if w/h <= 0.7:
                     h = int(h- 0.3*h)
                 # print("----------")
