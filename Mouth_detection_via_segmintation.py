@@ -311,9 +311,9 @@ def put_moustache(mst,fc,x,y,w,h):
                     fc[y+i][x+j][k] = mst[i-int(0.62857142857*face_height)][j-int(0.29166666666*face_width)][k]
     return fc
 
-mst = io.imread("C:/Users/Kanda/Desktop/proj/Image Project (Abdelgawad)/moustache.png")
-dog = io.imread("C:/Users/Kanda/Desktop/proj/Image Project (Abdelgawad)/dog_filter.png")
-hat = io.imread("C:/Users/Kanda/Desktop/proj/Image Project (Abdelgawad)/cowboy_hat.png")
+mst = io.imread("C:/Users/Kanda/Desktop/lipfy/moustache.png")
+dog = io.imread("C:/Users/Kanda/Desktop/lipfy/dog_filter.png")
+hat = io.imread("C:/Users/Kanda/Desktop/lipfy/cowboy_hat.png")
 cap = cv2.VideoCapture(0)
 while 1:
     ret, img = cap.read()
@@ -338,7 +338,7 @@ while 1:
         xw = box[3]
         h = np.abs(yh-y)
         w = np.abs(xw-x)
-        RGB_image = put_moustache(mst, RGB_image,x,y,w,h)
+        #RGB_image = put_moustache(mst, RGB_image,x,y,w,h)
         #RGB_image = put_hat(hat, RGB_image, x, y, w, h)
         #RGB_image = put_dog_filter(dog, RGB_image, x, y, w, h)
     #RGB_image = put_moustache(mst, RGB_image,x,y,w,h)
